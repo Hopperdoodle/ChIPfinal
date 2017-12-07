@@ -16,3 +16,4 @@ for (i in 1:nrow(All.df)) All.df$NumberOfIntrons[i] =
   length((which(unlist(gregexpr("[a-z]+",All.df$sequence[i]))>0)))
 for (i in 1:nrow(All.data)) All.data$NumberOfIntrons[i] =
   length((which(unlist(gregexpr("[a-z]+",All.data$sequence[i]))>0)))
+
