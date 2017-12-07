@@ -11,3 +11,4 @@ All.df <- as.data.frame(sequence, row.names(sequence))
 
 sequence_a <- unlist(HTZseq)
 All.data <- as.data.frame(sequence_a, row.names(sequence))
+
