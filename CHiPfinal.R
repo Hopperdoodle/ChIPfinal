@@ -35,7 +35,7 @@ hist(All.data$NumberOfIntrons,xlim=c(0,10),ylim=c(0,7000),breaks=20,axes=FALSE,c
 legend(6, 6000, legend=c("HTZ-1", "HTAS-1", "Overlap"),col=c("Light Blue","Yellow", "Light Green"),lty=1, cex=0.8)
 
 ####Creating a histogram for number of exons in HTAS-1 per sequence given across the gene
-hist(All.df$NumberOfExons,xlim=c(0,10),ylim=c(0,7000),breaks=20,col=rgb(1,0,1,0.7),main="Frequency vs Number of Exons",xlab="Number of Introns")
+hist(All.df$NumberOfExons,xlim=c(0,10),ylim=c(0,7000),breaks=20,col=rgb(1,0,1,0.7),main="Frequency vs Number of Exons",xlab="Number of Exons")
 ####This allows for overlapping of HTAS-1 and HTZ-1 data
 par(new=TRUE)
 ####Creating a histogram for HTZ-1 data
