@@ -41,4 +41,4 @@ par(new=TRUE)
 ####Creating a histogram for HTZ-1 data
 hist(All.data$NumberOfExons,xlim=c(0,10),ylim=c(0,7000),breaks=20,axes=FALSE,col=rgb(1,0.9,0,0.4),main="",xlab="",ylab="")
 ####Creating a legend to illustrate which colors correspond to which histone variant based on the data given. 
-legend(6, 6000, legend=c("Overlap", "HTAS-1", "Overlap"),col=c("Purple","Yellow", "Coral"),lty=1, cex=0.8)
+legend(6, 6000, legend=c("HTAS-1", "HTZ-1", "Overlap"),col=c("Purple","Yellow", "Coral"),lty=1, cex=0.8)
