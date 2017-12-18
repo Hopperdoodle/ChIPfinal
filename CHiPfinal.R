@@ -2,6 +2,7 @@ setwd("~/Desktop/CHIPdata/")
 
 library(seqinr)
 ####Storing the information from the FASTA file and reading it as a one element list as well as being able to identify where the introns and exons are located throughout each sequence.
+####The FASTA files contain peak sequences indicating where these genes are located in relation to the proteins of interest (HTAS-1 and HTZ-1)
 HTASseq <- read.fasta("HTAS_sequence.fasta", as.string = TRUE, forceDNAtolower = FALSE)
 HTZseq <- read.fasta("HTZ_sequence.fasta", as.string = TRUE, forceDNAtolower = FALSE)
 
