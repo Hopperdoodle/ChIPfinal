@@ -1,8 +1,8 @@
 setwd("~/Desktop/CHIPdata/")
 
 library(seqinr)
+####The FASTA files contain peak sequences indicating where the genes are located in relation to the proteins of interest (HTAS-1 and HTZ-1)
 ####Storing the information from the FASTA file and reading it as a one element list as well as being able to identify where the introns and exons are located throughout each sequence.
-####The FASTA files contain peak sequences indicating where these genes are located in relation to the proteins of interest (HTAS-1 and HTZ-1)
 HTASseq <- read.fasta("HTAS_sequence.fasta", as.string = TRUE, forceDNAtolower = FALSE)
 HTZseq <- read.fasta("HTZ_sequence.fasta", as.string = TRUE, forceDNAtolower = FALSE)
 
@@ -15,11 +15,11 @@ All.data <- as.data.frame(sequence_a, row.names(sequence))
 ####create a column called NumberOfIntrons that holds the number of introns for each sequence
 for (i in 1:nrow(All.df)) All.df$NumberOfIntrons[i] =
   length((which(unlist(gregexpr("[a-z]+",All.df$sequence[i]))>0)))
-####create a column called NumberOfIntrons that holds the number of exons for each sequence
+####create a column called NumberOfExons that holds the number of exons for each sequence
 for (i in 1:nrow(All.df)) All.df$NumberOfExons[i] =
   length((which(unlist(gregexpr("[A-Z]+",All.df$sequence[i]))>0)))
 
-####create a column called NumberOfExons that holds the number of introns for each sequence
+####create a column called NumberOfIntrons that holds the number of introns for each sequence
 for (i in 1:nrow(All.data)) All.data$NumberOfIntrons[i] =
   length((which(unlist(gregexpr("[a-z]+",All.data$sequence[i]))>0)))
 ####create a column called NumberOfExons that holds the number of exons for each sequence
